@@ -335,41 +335,4 @@ exports.resetPassword = async (req, res) => {
   }
 };
 
-// exports.sendmobileOtp = async (req, res) => {
-//   const accountSid = "AC1e0b07629df3e9fd14b07d06f7646433";
-//   const authToken = "9014f61278728c84d58ed5027073cf0a";
-
-//   const { mobileNumber } = req.body;
-//   try {
-//     const client = twilio(accountSid, authToken);
-//     var otp = otpGenerator.generate(6, {
-//       upperCaseAlphabets: false,
-//       lowerCaseAlphabets: false,
-//       specialChars: false,
-//     });
-
-//     const message = `Your OTP is ${otp}`;
-//     console.log(otp);
-//     console.log(mobileNumber);
-
-//     await client.messages.create({
-//       body: message,
-//       from: "+16262834514",
-//       to: mobileNumber,
-//     });
-
-//     // console.log(otp);
-//     // console.log(mobileNumber)
-
-//     res.status(200).json({
-//       success: true,
-//       message: "OTP send successfully",
-//       otp,
-//     });
-//   } catch (error) {
-//     res.status(404).json({
-//       success: false,
-//       message: "Problem in sending otp to moblie number",
-//     });
-//   }
-// };
+   
